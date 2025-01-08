@@ -52,7 +52,7 @@ void AMyActor::Move()
 	if (timer >= 1.f)
 	{
 		CalculateDistanceAndLocation();
-
+		CreateRandomEvent();
 
 		if (curIndex < destinations.Num() - 2)
 		{
@@ -66,8 +66,6 @@ void AMyActor::Move()
 				{
 						stop = false;
 				}), 1.0f, false);
-
-			CreateRandomEvent();
 		}
 		else
 		{
